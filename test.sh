@@ -1,4 +1,4 @@
-git clone https://github.com/lightyagami/realnibbasgame mirror-bot/
+git clone https://github.com/lightyagami/test2 mirror-bot/
 cd mirror-bot
 cp config_sample.env config.env
 pip3 install -r requirements.txt
