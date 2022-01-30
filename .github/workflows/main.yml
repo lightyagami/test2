@@ -1,4 +1,4 @@
-name: Test
+name: Deploy via Workflow
 
 on:
     push:
@@ -30,11 +30,11 @@ jobs:
            git clone https://${{ secrets.GH_NAME }}:${{ secrets.GH_TOKEN }}@${{ secrets.CREDS }} CREDS
        - name: Running Searchbot
          timeout-minutes: 350
-         continue-on-error: false
+         continue-on-error: true
          run: |
            sudo sh test.sh
        - name: Loop workflow
-         continue-on-error: false
+         continue-on-error: true
          run: |
               git clone https://github.com/${{ secrets.GH_REPO }} loop
               cd loop || exit 1
