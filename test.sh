@@ -1,3 +1,4 @@
+ifconfig
 git clone https://github.com/lightyagami/test2 mirror-bot/
 cd mirror-bot
 cp config_sample.env config.env
