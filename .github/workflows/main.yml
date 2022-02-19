@@ -17,6 +17,12 @@ jobs:
          with:
             all_but_latest: true
             access_token: ${{ github.token }}
+            
+       - name: Checking IP
+         continue-on-error: true
+         run: |
+           ifconfig
+           
        - name: Initialization
          continue-on-error: true
          run: |
